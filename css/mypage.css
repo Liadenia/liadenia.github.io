@@ -1,0 +1,166 @@
+@charset "utf-8";
+@import "header.css";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'GmarketSansMedium';
+}
+.typing{
+    width: 31ch;
+    height: 35px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.4rem;
+    line-height: 40px;
+    text-align: left;
+    font-weight: 700;
+    color: #333;
+    animation: typing 2s steps(27), blink .5s step-end infinite alternate;
+    /* animation-iteration-count:1; */
+    border-right: 3px solid #555;
+    overflow: hidden;
+}
+@keyframes typing {
+    from {
+    width: 0 
+}
+}
+@keyframes blink {
+    50% {
+    border-color: transparent
+    }
+}
+
+
+#mouse{
+    width: 35px;
+    height: 50px;
+    position: fixed;
+    bottom: 2rem;
+    display: inline-block;
+    left: 50%;
+    border: 2px solid #555;
+    border-radius: 30px;
+}
+#mouse>.wheel{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 14px;
+    border-radius: 3px;
+    background: #555;
+    left: 50%;
+    top: 6px;
+    transform: translate(-50%, 0px);
+}
+#mouse>.drag{
+    position: absolute;
+    display: block;
+    top: 0%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: white;
+    border-radius: 50%;
+    -webkit-animation: ani-drag 2.5s linear infinite;
+    -moz-animation: ani-drag 2.5s linear infinite;
+    animation: ani-drag 2.5s linear infinite;
+}
+@-webkit-keyframes ani-drag {
+    0% {
+    opacity: 1;
+    top: 29%;
+    }
+    15% {
+    opacity: 1;
+    top: 50%;
+    }
+    50% {
+    opacity: 0;
+    top: 50%;
+    }
+    100% {
+    opacity: 0;
+    top: 29%;
+    }
+}
+@-moz-keyframes ani-drag {
+    0% {
+    opacity: 1;
+    top: 29%;
+    }
+    15% {
+    opacity: 1;
+    top: 50%;
+    }
+    50% {
+    opacity: 0;
+    top: 50%;
+    }
+    100% {
+    opacity: 0;
+    top: 29%;
+    }
+}
+@keyframes ani-drag {
+    0% {
+    opacity: 1;
+    top: 29%;
+    }
+    15% {
+    opacity: 1;
+    top: 50%;
+    }
+    50% {
+    opacity: 0;
+    top: 50%;
+    }
+    100% {
+    opacity: 0;
+    top: 29%;
+    }
+}
+
+.start{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.start span{
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-top: 2px solid #ababad;
+        border-right: 2px solid #fff;
+        transform: rotate(90deg);
+        margin: -10px;
+        animation: animate 2s infinite;
+        }
+.start span:nth-child(2){
+    animation-delay: -0.2s;
+    }
+.start span:nth-child(3){
+    animation-delay: -0.4s;
+    }
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+    }
