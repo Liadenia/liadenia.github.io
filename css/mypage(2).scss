@@ -72,8 +72,8 @@ svg {
 
 #page1 {
   z-index: 950;
-  width: 600vw;
-  height: 100vh;
+  width: 700vw;
+  height: 700vh;
   .main_info {
     width: 500vw;
     height: 100vh;
@@ -89,7 +89,12 @@ svg {
       width: 100vw;
       height: 100vh;
       z-index: 800;
-      
+      >span{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+      }
+
       .first_p {
         .main {
           width: 100vw;
@@ -179,22 +184,18 @@ svg {
       
       .second_p{
         background: #268;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
       }
       .third_p{
         background: #587;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
       }
       .fourth_p{
         background: #656;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
       }
+      .fifth_p{
+        background: #245;
+      }
+      
+      
     }
   }
 }
