@@ -58,8 +58,7 @@ svg {
 }
 #page1 {
   z-index: 950;
-  width: 700vw;
-  height: 700vh;
+  height: 500vw;
 }
 #page1 .main_info {
   width: 500vw;
