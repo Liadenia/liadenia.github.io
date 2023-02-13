@@ -10,6 +10,24 @@
 
 body {
   font-family: 'GmarketSansMedium';
+  -ms-overflow-style: none;
+  overflow-x:hidden;
+  overflow-y:auto
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 100vh;
+}
+::-webkit-scrollbar-thumb {
+  height: auto;
+  background: #555;
+  border-radius: 2px;
+  // box-shadow: inset 0px 0px 5px white;
+}
+::-webkit-scrollbar-track {
+  width: 5px;
+  height: auto;
+  background: #fff;
 }
 section {
   width: 100vw;
@@ -72,7 +90,6 @@ svg {
 
 #page1 {
   z-index: 950;
-  // width: 500vw;
   height: 500vw;
   .main_info {
     width: 500vw;
@@ -187,9 +204,17 @@ svg {
       }
       .third_p{
         background: #587;
+        position: absolute;
       }
       .fourth_p{
         background: #656;
+        #move{
+          width: 50px;
+          height: 50px;
+          background: #1f1f1f;
+          position: absolute;
+          top: 20%; left: 30%;
+        }
       }
       .fifth_p{
         background: #245;
@@ -288,6 +313,7 @@ svg {
 #page2 {
   background: #f54;
   z-index: 400;
+  
 }
 
 #page3 {
@@ -301,65 +327,30 @@ svg {
 }
 #page5{
   background: #f07;
-  width: 100vw;
-  height: 270vh;
+  width: 100%;
+  height: 300vh;
   position: relative;
   bottom: 0;
   right: 0;
   z-index: 650;
   .last{
-    width: 100vw;
+    width: 100%;
     height: 200vh;
     position: absolute;
     bottom: 0;
-    right: 100vw;
+    right: 100%;
     display: flex;
     flex-direction: row-reverse;
     z-index: 680;
     background: #f87;
-    // .last_info{
-    //   position: relative;
-    //   width: 100vw;
-    //   height: 100vh;
-    //   z-index: 710;
-      .last_p{
-        background: #f47;
-        width: 40vw;
-        height: 30vh;
-        display: flex;
-        position: absolute;
-        bottom: 30%;
-        right: 40%;
-      }
-    // }
+    .last_p{
+      background: #f47;
+      width: 40vw;
+      height: 30vh;
+      display: flex;
+      position: absolute;
+      bottom: 30%;
+      left: 40%;
+    }
   }
-  
-  // z-index: 650;
-  // height: 200vw;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // .last_hor{
-  //   z-index: 655;
-  //   width: 200vw;
-  //   height: 100vh;
-  //   background: #555;
-  //   position: relative;
-  //   top: 0;
-  //   left: 0;
-  //   transition: all 0.6s ease-out;
-  //   display: flex;
-  //   flex-direction: row;
-  //   >span{
-  //     display: flex;
-  //     width: 100vw;
-  //     height: 100vh;
-  //   }
-  //   .last_p{
-  //     background: #ff0;
-  //   }
-  //   .last_p2{
-  //     background: #f87;
-  //   }
-  // }
 }
