@@ -10,44 +10,26 @@ const scroll=()=>{
     console.log(scrollTop, offset2);
     if(scrollTop>=document.querySelector('#page5').offsetTop){
         document.querySelector('#page5').style.left=`+${offset2}px`;
-    }
-
-    // document.querySelector('#portfolio').addEventListener('click', function(event) {
-    //     event.preventDefault();
-    //     let portfolioS = document.querySelector('#portfolio-s').offsetTop;
-    //     window.scrollTo({
-    //         top: portfolioS,
-    //         behavior: 'smooth'
-    //     });
-    //     console.log('#portfolio');
-    // });
-
-
-    const portfolio = document.querySelector("#portfolio");
-    portfolio.addEventListener("click", function(event) {
-        event.preventDefault();
-        const portfolioS = document.querySelector("#portfolio-s");
-        portfolioS.scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-    });
-
-
-
-    
+    }    
 }
 window.addEventListener('scroll',()=>(
     scroll()
 ))
 
-// document.querySelector('#portfolio').addEventListener('click', function(event) {
-//     event.preventDefault();
-//     document.querySelector('#portfolio-s').scrollIntoView({ 
-//     behavior: 'smooth' 
-//     });
-//     console.log('#portfolio')
-// });
+// ---------------------포트폴리오 버튼 클릭시 이동 및 사이즈 조절--------------
+const portfolio = document.querySelector("#portfolio");
+let portfolioClicked = false;
 
+
+window.addEventListener("click", function() {
+if (!portfolioClicked) {
+window.scrollTo({
+top: document.querySelector("#page1").offsetTop + 200 * window.innerWidth / 100,
+left: 0,
+behavior: 'smooth'
+});
+}
+});
 
 
 //-------------------------------contact GNB 클릭시 토글 페이지 보이기----------
