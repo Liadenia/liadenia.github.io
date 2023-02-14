@@ -9,7 +9,7 @@ const scroll=()=>{
     let offset2 = scrollTop - document.querySelector('#page5').offsetTop;
     console.log(scrollTop, offset2);
     if(scrollTop>=document.querySelector('#page5').offsetTop){
-        document.querySelector('#page5').style.left=`+${offset2}px`;
+        document.querySelector('#page5-2').style.left=`+${offset2}px`;
     }    
 }
 window.addEventListener('scroll',()=>(
@@ -17,18 +17,18 @@ window.addEventListener('scroll',()=>(
 ))
 
 // ---------------------포트폴리오 버튼 클릭시 이동 및 사이즈 조절--------------
+
 const portfolio = document.querySelector("#portfolio");
 let portfolioClicked = false;
 
-
-window.addEventListener("click", function() {
-if (!portfolioClicked) {
+portfolio.addEventListener("click", function(event) {
+event.preventDefault();
+portfolioClicked = true;
 window.scrollTo({
-top: document.querySelector("#page1").offsetTop + 200 * window.innerWidth / 100,
+top: document.querySelector("#page1").offsetTop + 300 * window.innerWidth / 100,
 left: 0,
 behavior: 'smooth'
 });
-}
 });
 
 
