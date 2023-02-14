@@ -5,12 +5,17 @@ const scroll=()=>{
     if(scrollTop>=document.querySelector('#page1').offsetTop){
         document.querySelector('.main_info').style.left=`-${offset1}px`;
     }
+
+
 // ----------------------------마지막 페이지 가로 스크롤------------------------
+
     let offset2 = scrollTop - document.querySelector('#page5').offsetTop;
     console.log(scrollTop, offset2);
     if(scrollTop>=document.querySelector('#page5').offsetTop){
-        document.querySelector('#page5-2').style.left=`+${offset2}px`;
-    }    
+        document.querySelector('#last_wrapper').style.left=`+${offset2}px`;
+    }
+
+
 }
 window.addEventListener('scroll',()=>(
     scroll()
