@@ -328,99 +328,35 @@ svg {
 }
 
 #page5{
-  background: #f07;
-  width: 200vw;
-  height: 300vh;
-  position: relative;
-  bottom: 0;
-  right: 0;
-  z-index: 650;
-  transition: all 0.6s ease-out;
-  display: flex;
-  .last{
-    width: 200vw;
+  background: #507;
+  height: 200vw;
+  z-index: 401;
+  #last_wrapper{
+    width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    right: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    z-index: 680;
-    background: #f87;
-    .last_p{
-      background: #f47;
-      width: 40vw;
-      height: 30vh;
+    right: 0;
+    z-index: 450;
+    transition: all 0.6s ease-out;
+    .last{
+      width: 100vw;
+      height: 100vh;
+      position: relative;
       display: flex;
-      position: absolute;
-      bottom: 30%;
-      left: 40%;
+      flex-direction: row-reverse;
+      z-index: 445;
+      background: #f87;
+      .last_p{
+        background: #f47;
+        width: 40vw;
+        height: 30vh;
+        display: flex;
+        position: absolute;
+        bottom: 30%;
+        left: 40%;
+        z-index: 435;
+      }
     }
   }
 }
-
-// #page5{
-//   background: #f07;
-//   width: 100%;
-//   height: 300vh;
-//   position: relative;
-//   bottom: 0;
-//   right: 0;
-//   z-index: 650;
-//   transition: all 0.6s ease-out;
-//   display: flex;
-//   .last{
-//     width: 100%;
-//     height: 200vh;
-//     position: absolute;
-//     bottom: 0;
-//     right: 100%;
-//     display: flex;
-//     flex-direction: row-reverse;
-//     z-index: 680;
-//     background: #f87;
-//     .last_p{
-//       background: #f47;
-//       width: 40vw;
-//       height: 30vh;
-//       display: flex;
-//       position: absolute;
-//       bottom: 30%;
-//       left: 40%;
-//     }
-//   }
-// }
-
-// #page5{
-//   background: #507;
-//   height: 200vw;
-//   z-index: 401;
-//   #last_wrapper{
-//     width: 100vw;
-//     height: 100vh;
-//     position: fixed;
-//     bottom: 0;
-//     right: 0;
-//     z-index: 450;
-//     transition: all 0.6s ease-out;
-//     .last{
-//       width: 100vw;
-//       height: 100vh;
-//       position: relative;
-//       display: flex;
-//       flex-direction: row-reverse;
-//       z-index: 445;
-//       background: #f87;
-//       .last_p{
-//         background: #f47;
-//         width: 40vw;
-//         height: 30vh;
-//         display: flex;
-//         position: absolute;
-//         bottom: 30%;
-//         left: 40%;
-//         z-index: 435;
-//       }
-//     }
-//   }
-// }

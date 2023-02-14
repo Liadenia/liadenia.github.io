@@ -261,28 +261,29 @@ svg {
 }
 
 #page5 {
-  background: #f07;
-  width: 200vw;
-  height: 300vh;
-  position: relative;
+  background: #507;
+  height: 200vw;
+  z-index: 401;
+}
+#page5 #last_wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 650;
+  z-index: 450;
   transition: all 0.6s ease-out;
-  display: flex;
 }
-#page5 .last {
-  width: 200vw;
+#page5 #last_wrapper .last {
+  width: 100vw;
   height: 100vh;
-  position: absolute;
-  bottom: 0;
-  right: 100%;
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
-  z-index: 680;
+  z-index: 445;
   background: #f87;
 }
-#page5 .last .last_p {
+#page5 #last_wrapper .last .last_p {
   background: #f47;
   width: 40vw;
   height: 30vh;
@@ -290,4 +291,5 @@ svg {
   position: absolute;
   bottom: 30%;
   left: 40%;
+  z-index: 435;
 }/*# sourceMappingURL=mypage(2).css.map */
