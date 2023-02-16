@@ -8,32 +8,21 @@
 }
 body {
   font-family: "GmarketSansMedium";
-  -ms-overflow-style: none;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 100vh;
-}
-
-::-webkit-scrollbar-thumb {
-  height: auto;
-  background: #555;
-  border-radius: 2px;
-}
-
-::-webkit-scrollbar-track {
-  width: 5px;
-  height: auto;
-  background: #fff;
 }
 
 section {
   width: 100vw;
   height: 100vh;
   position: relative;
+}
+
+@-webkit-keyframes animate-svg-fill-1 {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: rgb(0, 0, 0);
+  }
 }
 @keyframes animate-svg-fill-1 {
   0% {
@@ -44,6 +33,7 @@ section {
   }
 }
 .svg-elem-1 {
+  -webkit-animation: animate-svg-fill-1 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.8s both;
   animation: animate-svg-fill-1 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.8s both;
 }
 
@@ -60,7 +50,22 @@ svg {
 .path {
   stroke-dasharray: 2000;
   stroke-dashoffset: 3000;
-  animation: dash 2s linear alternate infinite;
+  -webkit-animation: dash 2s linear alternate infinite;
+          animation: dash 2s linear alternate infinite;
+}
+
+@-webkit-keyframes dash {
+  30% {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 100;
+    fill: #555;
+  }
+  /*     
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -40%;
+        fill: hsla(189, 68%, 75%,0%)
+    } */
 }
 
 @keyframes dash {
@@ -77,9 +82,8 @@ svg {
     } */
 }
 #page1 {
-  z-index: 1000;
+  z-index: 950;
   height: 500vw;
-  background: #ededed;
 }
 #page1 .main_info {
   width: 500vw;
@@ -119,7 +123,8 @@ svg {
   text-align: left;
   font-weight: 700;
   color: #333;
-  animation: typing 2s steps(27), blink 0.5s step-end infinite alternate;
+  -webkit-animation: typing 2s steps(27), blink 0.5s step-end infinite alternate;
+          animation: typing 2s steps(27), blink 0.5s step-end infinite alternate;
   /* animation-iteration-count:1; */
   border-right: 3px solid #555;
   overflow: hidden;
@@ -138,13 +143,16 @@ svg {
   border-right: 3px solid rgb(255, 255, 255);
   /* transform: rotate(90deg); */
   margin: -10px;
-  animation: animate 2s infinite;
+  -webkit-animation: animate 2s infinite;
+          animation: animate 2s infinite;
 }
 #page1 .main_info .intro .first_p .main .start .arrow:nth-child(2) {
-  animation-delay: -0.2s;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
 }
 #page1 .main_info .intro .first_p .main .start .arrow:nth-child(3) {
-  animation-delay: -0.4s;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
 }
 #page1 .main_info .intro .first_p #mouse {
   width: 35px;
@@ -177,6 +185,7 @@ svg {
   margin: -4px 0 0 -4px;
   background: white;
   border-radius: 50%;
+  -webkit-animation: ani-drag 2.5s linear infinite;
   animation: ani-drag 2.5s linear infinite;
 }
 #page1 .main_info .intro .second_p {
@@ -184,27 +193,28 @@ svg {
 }
 #page1 .main_info .intro .third_p {
   background: #587;
-  position: absolute;
 }
 #page1 .main_info .intro .fourth_p {
   background: #656;
-}
-#page1 .main_info .intro .fourth_p #move {
-  width: 50px;
-  height: 50px;
-  background: #1f1f1f;
-  position: absolute;
-  top: 20%;
-  left: 30%;
 }
 #page1 .main_info .intro .fifth_p {
   background: #245;
 }
 
 /* --------------------글자 타이핑 애니메이션-------------------- */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
 @keyframes typing {
   from {
     width: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
 @keyframes blink {
@@ -213,6 +223,24 @@ svg {
   }
 }
 /* --------------------마우스 휠 애니메이션-------------------- */
+@-webkit-keyframes ani-drag {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
 @keyframes ani-drag {
   0% {
     opacity: 1;
@@ -232,6 +260,19 @@ svg {
   }
 }
 /* --------------------메인 이미지 화살표 애니메이션-------------------- */
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translate(-20px, 20px) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20px, 20px) rotate(45deg);
+  }
+}
 @keyframes animate {
   0% {
     opacity: 0;
@@ -245,14 +286,26 @@ svg {
     transform: translate(20px, 20px) rotate(45deg);
   }
 }
+.wrpper {
+  width: 80%;
+  height: 80%;
+  box-sizing: border-box;
+  border: 1px solid #555;
+}
+
 #page2 {
   background: #f54;
-  z-index: 504;
+  z-index: 400;
+}
+#page2 .falling {
+  width: 80%;
+  height: 80%;
+  border: 1px solid #555;
 }
 
 #page3 {
   background: #2e6;
-  z-index: 505;
+  z-index: 500;
 }
 
 #page4 {
@@ -261,35 +314,31 @@ svg {
 }
 
 #page5 {
-  background: #507;
-  height: 200vw;
-  z-index: 401;
-}
-#page5 #last_wrapper {
+  background: #f07;
   width: 100vw;
-  height: 100vh;
-  position: fixed;
+  height: 270vh;
+  position: relative;
   bottom: 0;
   right: 0;
-  z-index: 450;
-  transition: all 0.6s ease-out;
+  z-index: 650;
 }
-#page5 #last_wrapper .last {
+#page5 .last {
   width: 100vw;
-  height: 100vh;
-  position: relative;
+  height: 200vh;
+  position: absolute;
+  bottom: 0;
+  right: 100vw;
   display: flex;
   flex-direction: row-reverse;
-  z-index: 445;
+  z-index: 680;
   background: #f87;
 }
-#page5 #last_wrapper .last .last_p {
+#page5 .last .last_p {
   background: #f47;
   width: 40vw;
   height: 30vh;
   display: flex;
   position: absolute;
   bottom: 30%;
-  left: 40%;
-  z-index: 435;
+  right: 40%;
 }/*# sourceMappingURL=mypage(2).css.map */
