@@ -192,6 +192,15 @@ svg {
 #page1 .main_info .intro .second_p {
   background: #268;
 }
+#page1 .main_info .intro .second_p .accordion {
+  width: 60%;
+  height: 60%;
+  background: #ededed;
+}
+#page1 .main_info .intro .second_p .accordion .card {
+  width: 20%;
+  height: auto;
+}
 #page1 .main_info .intro .third_p {
   background: #587;
 }

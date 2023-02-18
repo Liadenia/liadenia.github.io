@@ -213,6 +213,15 @@ svg {
       
       .second_p{
         background: #268;
+        .accordion{
+          width: 60%;
+          height: 60%;
+          background: #ededed;
+          .card{
+            width: 20%;
+            height: auto;
+          }
+        }
       }
       .third_p{
         background: #587;
