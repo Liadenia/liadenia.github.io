@@ -12,7 +12,7 @@ body {
   font-family: 'GmarketSansMedium';
   -ms-overflow-style: none;
   overflow-x:hidden;
-  overflow-y:auto
+  overflow-y:auto;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -216,10 +216,38 @@ svg {
         .accordion{
           width: 60%;
           height: 60%;
-          background: #ededed;
+          background: #f94;
+          display: flex;
+          overflow-x: scroll;
+          position: relative;
+          z-index: 933;
           .card{
-            width: 20%;
-            height: auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            margin-right: 20px;
+            background: #f94;
+            transition: left 0.3s ease-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 987;
+            .card-header{
+              background: #333;
+              height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+            }
+            .card-content{
+              // display: none;
+              padding: 20px;
+            }
+            .card.open{
+              transform: translateX(45%);
+            }
           }
         }
       }

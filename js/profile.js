@@ -50,3 +50,15 @@ $(function(){
     });
 });
 
+// ------------------------page1 -2 intro page accordion----------------
+
+const card = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    const header = card.querySelector('.card-header');
+    const content = card.querySelector('.card-content');
+
+header.addEventListener('click', () => {
+    card.classList.toggle('open');
+});
+});
