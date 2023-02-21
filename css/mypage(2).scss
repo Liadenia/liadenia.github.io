@@ -253,6 +253,15 @@ svg {
       }
       .third_p{
         background: #587;
+        .icon{
+          width: 80%;
+          height: 80%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
       }
       .fourth_p{
         // background: #656;
