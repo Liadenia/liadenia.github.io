@@ -52,13 +52,11 @@ $(function(){
 
 // ------------------------page1 -2 intro page accordion----------------
 
-const card = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card');
 
 cards.forEach(card => {
-    const header = card.querySelector('.card-header');
-    const content = card.querySelector('.card-content');
-
+const header = card.querySelector('.card-header');
 header.addEventListener('click', () => {
-    card.classList.toggle('open');
+    card.classList.toggle('active');
 });
 });

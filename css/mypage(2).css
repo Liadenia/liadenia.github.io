@@ -193,40 +193,30 @@ svg {
   background: #268;
 }
 #page1 .main_info .intro .second_p .accordion {
-  width: 60%;
-  height: 60%;
-  background: #f94;
   display: flex;
-  overflow-x: scroll;
-  position: relative;
-  z-index: 933;
+  flex-direction: column;
+  width: 40%;
 }
 #page1 .main_info .intro .second_p .accordion .card {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  margin-right: 20px;
-  background: #f94;
-  transition: left 0.3s ease-out;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 987;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 #page1 .main_info .intro .second_p .accordion .card .card-header {
-  background: #333;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #f7f7f7;
   cursor: pointer;
+  padding: 10px;
 }
 #page1 .main_info .intro .second_p .accordion .card .card-content {
   padding: 20px;
+  overflow: hidden;
+  transition: flex-grow 0.3s ease;
 }
-#page1 .main_info .intro .second_p .accordion .card .card.open {
-  transform: translateX(45%);
+#page1 .main_info .intro .second_p .accordion .card .card-header:hover {
+  background-color: #eee;
+}
+#page1 .main_info .intro .second_p .accordion .card .card.active .card-content {
+  flex-grow: 1;
 }
 #page1 .main_info .intro .third_p {
   background: #587;
