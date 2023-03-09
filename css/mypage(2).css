@@ -219,7 +219,7 @@ svg {
   flex-grow: 1;
 }
 #page1 .main_info .intro .third_p {
-  background: #587;
+  background: #245;
 }
 #page1 .main_info .intro .third_p .icon {
   width: 80%;
@@ -230,10 +230,6 @@ svg {
   align-items: center;
   justify-content: center;
 }
-#page1 .main_info .intro .fifth_p {
-  background: #245;
-}
-
 /* --------------------글자 타이핑 애니메이션-------------------- */
 @keyframes typing {
   from {
