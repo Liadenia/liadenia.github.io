@@ -215,22 +215,43 @@ svg {
         background: #268;
         .accordion{
           display: flex;
-          flex-direction: column;
-          width: 40%;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          height: 100vh;
+          transition: 0.25s;
           .card{
-            background-color: #fff;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            // border: 1px solid #ddd;
+            // margin-bottom: 20px;
             .card-header{
-              background-color: #f7f7f7;
-              cursor: pointer;
-              padding: 10px;
+              // background-color: #f7f7f7;
+              // cursor: pointer;
+              // padding: 10px;
+              display: flex;
+              flex-direction: row;
+              align-items: stretch;
+              overflow: hidden;
+              min-width: 600px;
+              max-width: 900px;
+              width: calc(100% - 100px);
+              height: 400px;
+
+              @for $i from 1 through 4 {
+                @media screen and (max-width:798px - $i*80) {
+                  min-width: 600px - $i*80;
+                  .option:nth-child(#{6-$i}) {
+                    display: none;
+                  }
+                }
+              }
             }
             .card-content{
-              // display: none;
-              padding: 20px;
-              overflow: hidden;
-              transition: flex-grow 0.3s ease;
+              
             }
             .card-header:hover {
               background-color: #eee;
@@ -241,6 +262,7 @@ svg {
           }
         }
       }
+      
       .third_p{
         background: #245;
         .icon{

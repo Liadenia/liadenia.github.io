@@ -194,23 +194,60 @@ svg {
 }
 #page1 .main_info .intro .second_p .accordion {
   display: flex;
-  flex-direction: column;
-  width: 40%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+  transition: 0.25s;
 }
 #page1 .main_info .intro .second_p .accordion .card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
 }
 #page1 .main_info .intro .second_p .accordion .card .card-header {
-  background-color: #f7f7f7;
-  cursor: pointer;
-  padding: 10px;
-}
-#page1 .main_info .intro .second_p .accordion .card .card-content {
-  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   overflow: hidden;
-  transition: flex-grow 0.3s ease;
+  min-width: 600px;
+  max-width: 900px;
+  width: calc(100% - 100px);
+  height: 400px;
+}
+@media screen and (max-width: 718px) {
+  #page1 .main_info .intro .second_p .accordion .card .card-header {
+    min-width: 520px;
+  }
+  #page1 .main_info .intro .second_p .accordion .card .card-header .option:nth-child(5) {
+    display: none;
+  }
+}
+@media screen and (max-width: 638px) {
+  #page1 .main_info .intro .second_p .accordion .card .card-header {
+    min-width: 440px;
+  }
+  #page1 .main_info .intro .second_p .accordion .card .card-header .option:nth-child(4) {
+    display: none;
+  }
+}
+@media screen and (max-width: 558px) {
+  #page1 .main_info .intro .second_p .accordion .card .card-header {
+    min-width: 360px;
+  }
+  #page1 .main_info .intro .second_p .accordion .card .card-header .option:nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 478px) {
+  #page1 .main_info .intro .second_p .accordion .card .card-header {
+    min-width: 280px;
+  }
+  #page1 .main_info .intro .second_p .accordion .card .card-header .option:nth-child(2) {
+    display: none;
+  }
 }
 #page1 .main_info .intro .second_p .accordion .card .card-header:hover {
   background-color: #eee;
