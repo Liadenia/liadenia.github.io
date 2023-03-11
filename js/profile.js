@@ -52,11 +52,34 @@ $(function(){
 
 // ------------------------page1 -2 intro page accordion----------------
 
-const cards = document.querySelectorAll('.card');
+// const cards = document.querySelectorAll('.card');
 
-cards.forEach(card => {
-const header = card.querySelector('.card-header');
-header.addEventListener('click', () => {
-    card.classList.toggle('active');
-});
-});
+// cards.forEach(card => {
+// const header = card.querySelector('.card-header');
+// header.addEventListener('click', () => {
+//     card.classList.toggle('active');
+// });
+// });
+const ACTIVECLASS = 'active';
+const IMAGES = document.querySelectorAll('.expending_card');
+
+IMAGES[0].classList.add(ACTIVECLASS);
+
+function removeActiveClass() {
+    const elm = document.querySelector(`.${ACTIVECLASS}`)
+    if (elm) {
+        elm.classList.remove(ACTIVECLASS);
+    }
+}
+
+function addClass($event) {
+    $event.stopPropagation();
+    removeActiveClass();
+    const target = $event.currentTarget;
+    target.classList.add(ACTIVECLASS);
+}
+
+IMAGES.forEach(image => {
+    image.addEventListener('click', addClass);
+})
+

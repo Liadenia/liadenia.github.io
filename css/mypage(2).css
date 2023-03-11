@@ -190,70 +190,103 @@ svg {
   animation: ani-drag 2.5s linear infinite;
 }
 #page1 .main_info .intro .second_p {
-  background: #268;
+  width: 100%;
 }
-#page1 .main_info .intro .second_p .accordion {
+#page1 .main_info .intro .second_p .card_wrapper {
+  width: 100%;
+  max-width: 80rem;
+  height: 75vh;
+  max-height: 130rem;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card {
+  margin: 20px 10px 0 10px;
+  height: 100%;
+  width: 10%;
+  transition: 450ms all ease-in-out;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card.active {
+  width: 80%;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card.active .card h3, #page1 .main_info .intro .second_p .card_wrapper .expending_card.active .card p {
+  opacity: 1;
+  transform: translateX(0);
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card.active .card .card_header {
+  width: 5rem;
+  height: 5rem;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card.active .card .card_header > img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card.move1 {
+  background-image: url("../attr/card/card1.png");
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card.move2 {
+  background-image: url("../attr/card/card2.png");
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card.move3 {
+  background-image: url("../attr/card/card3.png");
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card:last-child {
+  margin-right: 0;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card .card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  height: 9rem;
+  padding: 0 0 2rem 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  transition: 450ms all ease-in-out;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card .card_header {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: #f09;
+  transition: 450ms all ease-in-out;
+  display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  height: 100vh;
-  transition: 0.25s;
 }
-#page1 .main_info .intro .second_p .accordion .card {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+#page1 .main_info .intro .second_p .card_wrapper .expending_card .card_header > img {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: 450ms all ease-in-out;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card > h3 {
+  top: 0;
+  font-size: 1.8rem;
+  transition: 350ms 200ms all ease-in-out;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card > p {
+  top: 3rem;
+  font-size: 1.3rem;
+  transition: 350ms 300ms all ease-in-out;
+}
+#page1 .main_info .intro .second_p .card_wrapper .expending_card > h3, #page1 .main_info .intro .second_p .card_wrapper .expending_card p {
   color: #fff;
-}
-#page1 .main_info .intro .second_p .accordion .card .card-header {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  overflow: hidden;
-  min-width: 600px;
-  max-width: 900px;
-  width: calc(100% - 100px);
-  height: 400px;
-}
-@media screen and (max-width: 718px) {
-  #page1 .main_info .intro .second_p .accordion .card .card-header {
-    min-width: 520px;
-  }
-  #page1 .main_info .intro .second_p .accordion .card .card-header .option:nth-child(5) {
-    display: none;
-  }
-}
-@media screen and (max-width: 638px) {
-  #page1 .main_info .intro .second_p .accordion .card .card-header {
-    min-width: 440px;
-  }
-  #page1 .main_info .intro .second_p .accordion .card .card-header .option:nth-child(4) {
-    display: none;
-  }
-}
-@media screen and (max-width: 558px) {
-  #page1 .main_info .intro .second_p .accordion .card .card-header {
-    min-width: 360px;
-  }
-  #page1 .main_info .intro .second_p .accordion .card .card-header .option:nth-child(3) {
-    display: none;
-  }
-}
-@media screen and (max-width: 478px) {
-  #page1 .main_info .intro .second_p .accordion .card .card-header {
-    min-width: 280px;
-  }
-  #page1 .main_info .intro .second_p .accordion .card .card-header .option:nth-child(2) {
-    display: none;
-  }
-}
-#page1 .main_info .intro .second_p .accordion .card .card-header:hover {
-  background-color: #eee;
-}
-#page1 .main_info .intro .second_p .accordion .card .card.active .card-content {
-  flex-grow: 1;
+  position: absolute;
+  left: 9rem;
+  width: 20rem;
+  opacity: 0;
+  transform: translateX(-15px);
 }
 #page1 .main_info .intro .third_p {
   background: #245;

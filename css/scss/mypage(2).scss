@@ -212,57 +212,110 @@ svg {
       }
       
       .second_p{
-        background: #268;
-        .accordion{
+        // background: #268;
+        width: 100%;
+        .card_wrapper{
+          width: 100%;
+          max-width: 80rem;
+          height: 75vh;
+          max-height: 130rem;
           display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-          height: 100vh;
-          transition: 0.25s;
-          .card{
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            color: #fff;
-            // border: 1px solid #ddd;
-            // margin-bottom: 20px;
-            .card-header{
-              // background-color: #f7f7f7;
-              // cursor: pointer;
-              // padding: 10px;
-              display: flex;
-              flex-direction: row;
-              align-items: stretch;
-              overflow: hidden;
-              min-width: 600px;
-              max-width: 900px;
-              width: calc(100% - 100px);
-              height: 400px;
+          justify-content: space-between;
+          align-items: stretch;
 
-              @for $i from 1 through 4 {
-                @media screen and (max-width:798px - $i*80) {
-                  min-width: 600px - $i*80;
-                  .option:nth-child(#{6-$i}) {
-                    display: none;
+          .expending_card{
+            margin: 20px 10px 0 10px;
+            height: 100%;
+            width: 10%;
+            transition: 450ms all ease-in-out;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            &.active{
+              width: 80%;
+              .card{
+                h3, p{
+                  opacity: 1;
+                  transform: translateX(0);
+                }
+                .card_header{
+                  width: 5rem;
+                  height: 5rem;
+                  >img{
+                    width: 2.5rem;
+                    height: 2.5rem;
                   }
                 }
               }
             }
-            .card-content{
-              
+            &.move1{
+              background-image: url("../attr/card/card1.png");
             }
-            .card-header:hover {
-              background-color: #eee;
+            &.move2{
+              background-image: url("../attr/card/card2.png");
             }
-            .card.active .card-content {
-              flex-grow: 1;
+            &.move3{
+              background-image: url("../attr/card/card3.png");
+            }
+            &:last-child{
+              margin-right: 0;
+            }
+            .card{
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              z-index: 3;
+              height: 9rem;
+              padding: 0 0 2rem 1.5rem;
+              display: flex;
+              justify-content: flex-start;
+              align-items: flex-end;
+              width: 100%;
+              transition: 450ms all ease-in-out;
+            }
+            .card_header{
+              width: 3rem;
+              height: 3rem;
+              border-radius: 100%;
+              background-color: #f09;
+              transition: 450ms all ease-in-out;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              >img{
+                width: 1.5rem;
+                height: 1.5rem;
+                transition: 450ms all ease-in-out;
+              }
+            }
+            >h3{
+              top: 0;
+              font-size: 1.8rem;
+              transition: 350ms 200ms all ease-in-out;
+            }
+            >p{
+              top: 3rem;
+              font-size: 1.3rem;
+              transition: 350ms 300ms all ease-in-out;
+            }
+            >h3, p{
+              color: #fff;
+              position: absolute;
+              left: 9rem;
+              width: 20rem;
+              opacity: 0;
+              transform: translateX(-15px);
             }
           }
         }
       }
-      
+
+// --------------------------------------------     
       .third_p{
         background: #245;
         .icon{
