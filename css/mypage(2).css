@@ -118,13 +118,13 @@ svg {
   height: 100vh;
 }
 #page1 .main_info .intro .first_p .main .typing {
-  width: 32ch;
-  height: 35px;
+  width: 31ch;
+  height: 40px;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.4rem;
+  font-size: 2rem;
   line-height: 40px;
   text-align: left;
   font-weight: 700;
@@ -377,8 +377,16 @@ svg {
 }
 
 #page3 {
-  background: #2e6;
+  background: #ededed;
   z-index: 505;
+}
+#page3 .wrapper_3 {
+  width: 80%;
+  height: 80%;
+  border: 1px solid #555;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
 #page4 {

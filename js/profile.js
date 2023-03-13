@@ -44,42 +44,36 @@ $(function(){
         $('.con-bg').fadeToggle(400)
     });
 
-    $('.con-bg').on('click', function(){
+    $('.con-txt').on('click', function(){
         $('.con-txt, .con-bg').removeClass('on');
         $('.con-bg').fadeOut(400)
     });
 });
 
+
+
 // ------------------------page1 -2 intro page accordion----------------
 
-// const cards = document.querySelectorAll('.card');
+const introCard = 'active';
+const cardImg = document.querySelectorAll('.expending_card');
 
-// cards.forEach(card => {
-// const header = card.querySelector('.card-header');
-// header.addEventListener('click', () => {
-//     card.classList.toggle('active');
-// });
-// });
-const ACTIVECLASS = 'active';
-const IMAGES = document.querySelectorAll('.expending_card');
+cardImg[0].classList.add(introCard);
 
-IMAGES[0].classList.add(ACTIVECLASS);
-
-function removeActiveClass() {
-    const elm = document.querySelector(`.${ACTIVECLASS}`)
+function removeintroCard() {
+    const elm = document.querySelector(`.${introCard}`)
     if (elm) {
-        elm.classList.remove(ACTIVECLASS);
+        elm.classList.remove(introCard);
     }
 }
 
 function addClass($event) {
     $event.stopPropagation();
-    removeActiveClass();
+    removeintroCard();
     const target = $event.currentTarget;
-    target.classList.add(ACTIVECLASS);
+    target.classList.add(introCard);
 }
 
-IMAGES.forEach(image => {
+cardImg.forEach(image => {
     image.addEventListener('click', addClass);
 })
 

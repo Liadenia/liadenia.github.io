@@ -82,6 +82,7 @@ body{
     left: 80px;
     justify-content: center;
     visibility: hidden;
+    cursor: pointer;
 }
 .con-txt>p{
     color: #fff;
@@ -90,19 +91,24 @@ body{
     line-height: 35px;
     font-weight: bold;
     letter-spacing: 3px;
-    z-index:100;
+    background-color: transparent;
     /* visibility: hidden; */
 }
 .con-txt>p:first-child{
-    font-size: 32px;
+    font-size: 3rem;
     line-height: 80px;
+    margin-bottom: 20px;
+    background: linear-gradient(91.72deg, #00E1D4 22.71%, rgba(32, 136, 213, 0.915885) 49.93%, rgba(152, 118, 252, 0.81) 70.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 .con-bg{
     width:100vw; height:100vh;
     position:fixed;
     left:80px; top:0px;
     background:rgba(0, 0, 0, 0.8);
-    z-index:1000;
+    z-index: 1019;
     display: none;
 }
 .on{ visibility: visible;}
