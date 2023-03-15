@@ -78,11 +78,11 @@ svg {
 }
 #page1 {
   z-index: 1000;
-  height: 500vw;
+  height: 450vw;
   background: #ededed;
 }
 #page1 .main_info {
-  width: 500vw;
+  width: 450vw;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -364,16 +364,8 @@ svg {
   }
 }
 #page2 {
-  background: #f54;
+  background: #777;
   z-index: 504;
-}
-#page2 .falling {
-  width: 80%;
-  height: 80%;
-  border: 1px solid #555;
-  position: absolute;
-  top: 10%;
-  left: 10%;
 }
 
 #page3 {

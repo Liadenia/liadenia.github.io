@@ -21,6 +21,23 @@ window.addEventListener('scroll',()=>(
     scroll()
 ))
 
+
+// intro 버튼 클릭시 이동 ----------------------------------
+
+const intro = document.querySelector("#intro");
+let introClicked = false;
+
+intro.addEventListener("click", function(event) {
+event.preventDefault();
+introClicked = true;
+window.scrollTo({
+top: document.querySelector("#page1").offsetTop + 100 * window.innerWidth / 100,
+left: 0,
+behavior: 'smooth'
+});
+});
+
+
 // ---------------------포트폴리오 버튼 클릭시 이동 및 사이즈 조절--------------
 
 const portfolio = document.querySelector("#portfolio");
@@ -51,8 +68,7 @@ $(function(){
 });
 
 
-
-// ------------------------page1 -2 intro page accordion----------------
+// ------------------------page1 -2 intro page expending card----------------
 
 const introCard = 'active';
 const cardImg = document.querySelectorAll('.expending_card');
@@ -76,4 +92,3 @@ function addClass($event) {
 cardImg.forEach(image => {
     image.addEventListener('click', addClass);
 })
-
