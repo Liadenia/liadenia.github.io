@@ -308,7 +308,7 @@ svg {
   transform: translateX(-15px);
 }
 #page1 .main_info .intro .third_p {
-  background: #245;
+  background: #ededed;
 }
 #page1 .main_info .intro .third_p .icon {
   width: 80%;
@@ -367,6 +367,14 @@ svg {
   background: #777;
   z-index: 504;
 }
+#page2 .wrapper_2 {
+  width: 80%;
+  height: 80%;
+  border: 1px solid #555;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
 
 #page3 {
   background: #ededed;
@@ -382,12 +390,20 @@ svg {
 }
 
 #page4 {
-  background: #08d;
+  background: #777;
   z-index: 600;
+}
+#page4 .wrapper_4 {
+  width: 80%;
+  height: 80%;
+  border: 1px solid #555;
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
 
 #page5 {
-  background: #507;
+  background: #ededed;
   height: 200vw;
   z-index: 401;
 }
@@ -407,7 +423,7 @@ svg {
   display: flex;
   flex-direction: row-reverse;
   z-index: 445;
-  background: #f87;
+  background: #ededed;
 }
 #page5 #last_wrapper .last .last_p {
   background: #f47;
