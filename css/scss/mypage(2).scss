@@ -335,7 +335,20 @@ svg {
 
 // --------------------------------------------     
       .third_p{
-        background: #ededed;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        // background: linear-gradient(
+        // -45deg,
+        // rgb(213, 213, 213) 30%,
+        // rgba(229, 155, 35, 0) 100%,
+        // rgb(147, 215, 65) 100%,
+        // rgba(155, 250, 255, 0.841) 100%,
+        // rgb(241, 255, 173) 100%
+        // );
+        // background-size: 200% 100%;
+        // animation: gradient 10s linear infinite;
         .icon{
           width: 80%;
           height: 80%;
@@ -346,6 +359,20 @@ svg {
           justify-content: center;
         }
       }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+//---gradient background--------------------
+
       .fourth_p{
         // background: #656;
       }
@@ -456,7 +483,7 @@ svg {
     border: 1px solid #555;
     position: absolute;
     top: 10%;
-    left: 10%;
+    right: 5%;
   }
 }
 
@@ -469,7 +496,7 @@ svg {
     border: 1px solid #555;
     position: absolute;
     top: 10%;
-    left: 10%;
+    right: 5%;
   }
 }
 
@@ -482,15 +509,103 @@ svg {
     border: 1px solid #555;
     position: absolute;
     top: 10%;
-    left: 10%;
+    right: 5%;
   }
 }
 
+.left{
+  width: 40%;
+  height: 80%;
+  background: #fff;
+  margin: 5% 20px;
+  border-radius: 20px;
+  .text{
+    display: inline-block;
+    padding: 10%;
+    >h3{
+      font-size: 2.1rem;
+      text-align: center;
+      line-height: 50px;
+      margin-bottom: 15%;
+    }
+    >p{
+      font-size: 1.2rem;
+      line-height: 30px;
+    }
+  }
+  .use{
+    display: block;
+    padding: 2% 10%;
+    text-align: right;
+    >p{
+      width: auto;
+      font-size: 0.8rem;
+      padding: 5px 20px;
+      margin: 5px 0 5px 5px;
+      background: #777;
+      color: #fff;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+  }
+  .btns{
+    display: block;
+    text-align: right;
+    margin: 10px 0 40px 0;
+    padding: 2% 10%;
+    >button{
+      background: #23a6d5;
+      border-radius: 5px;
+      margin-left: 15px;
+      >a{
+        width: 100px;
+        display: block;
+        padding: 5px;
+        color: #ddd;
+      }
+    }
+  }
+}
+.right{
+  width: 50%;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  >img{
+    height: 70vh;
+    background: #fff;
+    display: block;
+    border: 2px solid #222;
+  }
+  
+}
+
 #page5{
-  background: #ededed;
+  background: #ee7752;
   height: 200vw;
   z-index: 401;
+  position: relative;
+  .last{
+    width: 60%;
+    height: 70vh;
+    background: #fff;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+  }
+  .page5-2{
+    width: 100px;
+    height: 300px;
+    background: #fff;
+    position: fixed;
+    bottom: 30%;
+    right: 50%;
+  }
   #last_wrapper{
+    background: #ededed;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -498,7 +613,7 @@ svg {
     right: 0;
     z-index: 450;
     transition: all 0.6s ease-out;
-    .last{
+    .game{
       width: 100vw;
       height: 100vh;
       position: relative;
@@ -506,14 +621,14 @@ svg {
       flex-direction: row-reverse;
       z-index: 445;
       background: #ededed;
-      .last_p{
+      .game_p{
         background: #f47;
         width: 40vw;
         height: 30vh;
         display: flex;
         position: absolute;
         bottom: 30%;
-        left: 40%;
+        left: 10%;
         z-index: 435;
       }
     }

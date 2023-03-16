@@ -308,7 +308,10 @@ svg {
   transform: translateX(-15px);
 }
 #page1 .main_info .intro .third_p {
-  background: #ededed;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 #page1 .main_info .intro .third_p .icon {
   width: 80%;
@@ -318,6 +321,17 @@ svg {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 /* --------------------글자 타이핑 애니메이션-------------------- */
 @keyframes typing {
@@ -373,7 +387,7 @@ svg {
   border: 1px solid #555;
   position: absolute;
   top: 10%;
-  left: 10%;
+  right: 5%;
 }
 
 #page3 {
@@ -386,7 +400,7 @@ svg {
   border: 1px solid #555;
   position: absolute;
   top: 10%;
-  left: 10%;
+  right: 5%;
 }
 
 #page4 {
@@ -399,15 +413,103 @@ svg {
   border: 1px solid #555;
   position: absolute;
   top: 10%;
-  left: 10%;
+  right: 5%;
+}
+
+.left {
+  width: 40%;
+  height: 80%;
+  background: #fff;
+  margin: 5% 20px;
+  border-radius: 20px;
+}
+.left .text {
+  display: inline-block;
+  padding: 10%;
+}
+.left .text > h3 {
+  font-size: 2.1rem;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 15%;
+}
+.left .text > p {
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+.left .use {
+  display: block;
+  padding: 2% 10%;
+  text-align: right;
+}
+.left .use > p {
+  width: auto;
+  font-size: 0.8rem;
+  padding: 5px 20px;
+  margin: 5px 0 5px 5px;
+  background: #777;
+  color: #fff;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.left .btns {
+  display: block;
+  text-align: right;
+  margin: 10px 0 40px 0;
+  padding: 2% 10%;
+}
+.left .btns > button {
+  background: #23a6d5;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+.left .btns > button > a {
+  width: 100px;
+  display: block;
+  padding: 5px;
+  color: #ddd;
+}
+
+.right {
+  width: 50%;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+}
+.right > img {
+  height: 70vh;
+  background: #fff;
+  display: block;
+  border: 2px solid #222;
 }
 
 #page5 {
-  background: #ededed;
+  background: #ee7752;
   height: 200vw;
   z-index: 401;
+  position: relative;
+}
+#page5 .last {
+  width: 60%;
+  height: 70vh;
+  background: #fff;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+}
+#page5 .page5-2 {
+  width: 100px;
+  height: 300px;
+  background: #fff;
+  position: fixed;
+  bottom: 30%;
+  right: 50%;
 }
 #page5 #last_wrapper {
+  background: #ededed;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -416,7 +518,7 @@ svg {
   z-index: 450;
   transition: all 0.6s ease-out;
 }
-#page5 #last_wrapper .last {
+#page5 #last_wrapper .game {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -425,13 +527,13 @@ svg {
   z-index: 445;
   background: #ededed;
 }
-#page5 #last_wrapper .last .last_p {
+#page5 #last_wrapper .game .game_p {
   background: #f47;
   width: 40vw;
   height: 30vh;
   display: flex;
   position: absolute;
   bottom: 30%;
-  left: 40%;
+  left: 10%;
   z-index: 435;
 }
