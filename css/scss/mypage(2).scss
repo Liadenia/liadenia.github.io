@@ -375,6 +375,73 @@ svg {
 
       .fourth_p{
         // background: #656;
+        .wrapper{
+          >h2{
+            text-align: center;
+            font-size: 2.3rem;
+            margin: 3%;
+          }
+          .po{
+            >a{
+              width: 100%;
+            }
+          }
+          .portfolio_1{
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            >h3{
+              width: 100px;
+              text-align: left;
+              line-height: 50px;
+            }
+            >div{
+              width: 250px;
+              height: 250px;
+              display: inline-flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              background: #f47;
+              margin: 10px;
+            }
+          }
+          .portfolio_2{
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            >h3{
+              width: 100px;
+              text-align: left;
+              line-height: 50px;
+            }
+            >div{
+              width: 250px;
+              height: 250px;
+              display: inline-flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              background: #23a978;
+              margin: 10px;
+              cursor: pointer;
+            }
+            .po{
+              >span{
+                width: 50%;
+                height: 70%;
+                background: #fff;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+              }
+
+            }
+          }
+        }
       }
       .fifth_p{
         // background: #245;

@@ -92,3 +92,25 @@ function addClass($event) {
 cardImg.forEach(image => {
     image.addEventListener('click', addClass);
 })
+
+
+// -------------- 포트폴리오 팝업 띄우기 ----------
+
+$(function(){
+    $('.po5').on('click', function(){
+        $('.popup0').toggleClass('on');
+        $('.popup0').fadeToggle(400)
+    });
+    $('.po6').on('click', function(){
+        $('.popup1').toggleClass('on');
+        $('.popup1').fadeToggle(400)
+    });
+    $('.po7').on('click', function(){
+        $('.popup2').toggleClass('on');
+        $('.popup2').fadeToggle(400)
+    });
+    $('.po8').on('click', function(){
+        $('.popup3').toggleClass('on');
+        $('.popup3').fadeToggle(400)
+    });
+});
