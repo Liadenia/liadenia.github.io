@@ -174,7 +174,7 @@ svg {
   left: 50%;
   border: 2px solid #555;
   border-radius: 30px;
-  z-index: 88888;
+  z-index: 888888;
 }
 #page1 .main_info .intro .first_p #mouse .wheel {
   content: "";
@@ -607,11 +607,21 @@ svg {
 }
 #page5 #last_wrapper .game .game_p {
   background: #f47;
-  width: 40vw;
+  width: 20vw;
+  height: 60vh;
+  display: flex;
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  z-index: 435;
+}
+#page5 #last_wrapper .game .game_p2 {
+  background: #fff;
+  width: 20vh;
   height: 30vh;
   display: flex;
   position: absolute;
   bottom: 30%;
-  left: 10%;
-  z-index: 435;
+  right: 30%;
+  z-index: 436;
 }
