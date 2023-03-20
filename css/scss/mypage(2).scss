@@ -89,10 +89,50 @@ svg {
 }
 
 #page1 {
-  z-index: 1000;
+  z-index: 9000;
   // width: 500vw;
   height: 450vw;
   background: #ededed;
+  #mouse {
+    width: 35px;
+    height: 50px;
+    position: fixed;
+    bottom: 2rem;
+    display: inline-block;
+    left: 50%;
+    border: 2px solid #555;
+    border-radius: 30px;
+    z-index: 8888;
+
+    .wheel {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 14px;
+      border-radius: 3px;
+      background: #555;
+      left: 50%;
+      top: 6px;
+      transform: translate(-50%, 0px);
+      z-index: 8887;
+    }
+
+    .drag {
+      position: absolute;
+      display: block;
+      top: 0%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      margin: -4px 0 0 -4px;
+      background: white;
+      border-radius: 50%;
+      -webkit-animation: ani-drag 2.5s linear infinite;
+      -moz-animation: ani-drag 2.5s linear infinite;
+      animation: ani-drag 2.5s linear infinite;
+      z-index: 8889;
+    }
+  }
   .main_info {
     width: 450vw;
     height: 100vh;
@@ -128,9 +168,8 @@ svg {
         .main {
           width: 100vw;
           height: 100vh;
-
           .typing {
-            width: 31ch;
+            width: 32ch;
             height: 40px;
             position: absolute;
             top: 40%;
@@ -180,47 +219,6 @@ svg {
           background: #777;
           width: 120px;
           height: 200px;
-        }
-
-        #mouse {
-          width: 35px;
-          height: 50px;
-          position: fixed;
-          bottom: 2rem;
-          display: inline-block;
-          left: 50%;
-          border: 2px solid #555;
-          border-radius: 30px;
-          z-index: 888888;
-
-          .wheel {
-            content: "";
-            position: absolute;
-            width: 3px;
-            height: 14px;
-            border-radius: 3px;
-            background: #555;
-            left: 50%;
-            top: 6px;
-            transform: translate(-50%, 0px);
-            z-index: 88887;
-          }
-
-          .drag {
-            position: absolute;
-            display: block;
-            top: 0%;
-            left: 50%;
-            width: 8px;
-            height: 8px;
-            margin: -4px 0 0 -4px;
-            background: white;
-            border-radius: 50%;
-            -webkit-animation: ani-drag 2.5s linear infinite;
-            -moz-animation: ani-drag 2.5s linear infinite;
-            animation: ani-drag 2.5s linear infinite;
-            z-index: 88889;
-          }
         }
       }
       
@@ -336,9 +334,10 @@ svg {
 // --------------------------------------------     
       .third_p{
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
+        z-index: 908;
+        position: absolute;
         // background: linear-gradient(
         // -45deg,
         // rgb(213, 213, 213) 30%,
