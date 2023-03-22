@@ -157,7 +157,7 @@ svg {
   height: 100vh;
 }
 #page1 .main_info .intro .first_p .main .typing {
-  width: 32ch;
+  width: 33ch;
   height: 40px;
   position: absolute;
   top: 40%;
@@ -385,7 +385,7 @@ svg {
   background: url("../attr/icon/ai.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po {
-  filter: grayscale(60%);
+  filter: grayscale(40%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -484,6 +484,7 @@ svg {
   height: auto;
   margin: 30px auto;
 }
+
 /* --------------------글자 타이핑 애니메이션-------------------- */
 @keyframes typing {
   from {
@@ -529,42 +530,42 @@ svg {
   }
 }
 #page2 {
-  background: #777;
+  background: linear-gradient(180deg, #EDEDED 0%, #CBEFFF 100%);
   z-index: 504;
 }
 #page2 .wrapper_2 {
   width: 80%;
   height: 80%;
-  border: 1px solid #555;
   position: absolute;
   top: 10%;
   right: 5%;
+  z-index: 405;
 }
 
 #page3 {
-  background: #ededed;
+  background: linear-gradient(180deg, #96BCC4 0%, #FFFFFF 100%);
   z-index: 505;
 }
 #page3 .wrapper_3 {
   width: 80%;
   height: 80%;
-  border: 1px solid #555;
   position: absolute;
   top: 10%;
   right: 5%;
+  z-index: 406;
 }
 
 #page4 {
-  background: #777;
+  background: linear-gradient(180deg, #D90327 0%, #ededed 100%);
   z-index: 600;
 }
 #page4 .wrapper_4 {
   width: 80%;
   height: 80%;
-  border: 1px solid #555;
   position: absolute;
   top: 10%;
   right: 5%;
+  z-index: 407;
 }
 
 .left {
@@ -637,8 +638,18 @@ svg {
   border: 2px solid #222;
 }
 
+.right_bg {
+  width: 49%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 34.38%, rgba(255, 255, 255, 0.8) 50.52%, rgba(255, 255, 255, 0.79) 67.19%, rgba(255, 255, 255, 0.0595745) 100%);
+  z-index: 90;
+}
+
 #page5 {
-  background: #ee7752;
+  background: linear-gradient(90deg, #EDEDED 0%, #D597DF 100%);
   height: 200vw;
   z-index: 401;
   position: relative;
