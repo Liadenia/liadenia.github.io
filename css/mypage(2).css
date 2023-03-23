@@ -628,14 +628,21 @@ svg {
 .right {
   width: 50%;
   position: absolute;
-  top: 5%;
-  right: 2%;
+  top: 0;
+  right: 10%;
 }
 .right > img {
-  height: 70vh;
-  background: #fff;
+  height: 80vh;
   display: block;
-  border: 2px solid #222;
+}
+.right > video {
+  position: absolute;
+  top: 174px;
+  left: 264px;
+}
+.right .vd1 {
+  top: 204px;
+  left: 263px;
 }
 
 .right_bg {
