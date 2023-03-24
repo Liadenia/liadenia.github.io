@@ -157,7 +157,7 @@ svg {
   height: 100vh;
 }
 #page1 .main_info .intro .first_p .main .typing {
-  width: 33ch;
+  width: 34ch;
   height: 40px;
   position: absolute;
   top: 40%;
@@ -168,7 +168,7 @@ svg {
   text-align: left;
   font-weight: 700;
   color: #333;
-  animation: typing 2s steps(27), blink 0.5s step-end infinite alternate;
+  animation: typing 2s steps(28), blink 0.5s step-end infinite alternate;
   /* animation-iteration-count:1; */
   border-right: 3px solid #555;
   overflow: hidden;
@@ -403,6 +403,9 @@ svg {
   line-height: 250px;
   cursor: pointer;
 }
+#page1 .main_info .intro .fourth_p .wrapper .po > a:hover {
+  color: #222;
+}
 #page1 .main_info .intro .fourth_p .wrapper .portfolio_1 {
   width: 100%;
   display: inline-flex;
@@ -427,7 +430,6 @@ svg {
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #fff;
   width: 250px;
   height: 250px;
   line-height: 250px;
@@ -589,47 +591,6 @@ svg {
   font-size: 1.2rem;
   line-height: 30px;
 }
-.left .use {
-  display: block;
-  padding: 2% 10%;
-  text-align: right;
-}
-.left .use > p {
-  width: auto;
-  font-size: 0.8rem;
-  padding: 5px 20px;
-  margin: 5px 0 5px 5px;
-  background: #777;
-  color: #fff;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-}
-.left .btns {
-  display: block;
-  text-align: right;
-  margin: 10px 0 40px 0;
-  padding: 2% 10%;
-}
-.left .btns > button {
-  background: #23a6d5;
-  border-radius: 5px;
-  margin-left: 15px;
-}
-.left .btns > button:hover {
-  box-shadow: inset 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
-}
-.left .btns > button > a {
-  width: 100px;
-  display: block;
-  padding: 5px;
-  color: #fff;
-}
-.left .btns > button > a:hover {
-  color: #222;
-}
 
 .right {
   width: 50%;
@@ -649,6 +610,10 @@ svg {
 .right .vd1 {
   top: 204px;
   left: 263px;
+}
+.right .vd2 {
+  top: 90px;
+  left: 150px;
 }
 
 .right_bg {
@@ -703,7 +668,7 @@ svg {
   background: #ededed;
 }
 #page5 #last_wrapper .game .game_p {
-  background: #f47;
+  background: #fefefe;
   width: 20vw;
   height: 60vh;
   display: flex;
@@ -711,14 +676,97 @@ svg {
   bottom: 20%;
   left: 20%;
   z-index: 435;
+  border: 3px solid #777;
 }
 #page5 #last_wrapper .game .game_p2 {
   background: #fff;
-  width: 20vh;
-  height: 30vh;
-  display: flex;
+  width: 30vw;
+  height: 60vh;
   position: absolute;
-  bottom: 30%;
-  right: 30%;
+  bottom: 20%;
+  right: 20%;
   z-index: 436;
+  border-radius: 20px;
+  border: 3px dashed #d59099;
+}
+#page5 #last_wrapper .game .game_p2 .text {
+  display: inline-block;
+  padding: 5% 10%;
+}
+#page5 #last_wrapper .game .game_p2 .text > h3 {
+  font-size: 2.1rem;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 15%;
+}
+#page5 #last_wrapper .game .game_p2 .text > p {
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+
+.use {
+  display: block;
+  padding: 2% 10%;
+  text-align: right;
+}
+.use > p {
+  width: auto;
+  font-size: 0.8rem;
+  padding: 5px 20px;
+  margin: 5px 0 5px 5px;
+  background: #777;
+  color: #fff;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.use .html {
+  background: #E44D26;
+}
+.use .css {
+  background: #1673B6;
+}
+.use .java {
+  background: #e6a327;
+}
+.use .jquery {
+  background: #162C45;
+}
+.use .scss {
+  background: #cc6699;
+}
+.use .photo {
+  background: #2FA3F7;
+}
+.use .illust {
+  background: #FF9B00;
+}
+.use .figma {
+  background: #9C60F4;
+}
+
+.btns {
+  display: block;
+  text-align: right;
+  margin: 10px 0 40px 0;
+  padding: 2% 10%;
+}
+.btns > button {
+  background: #23a6d5;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+.btns > button:hover {
+  box-shadow: inset 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.btns > button > a {
+  width: 100px;
+  display: block;
+  padding: 5px;
+  color: #fff;
+}
+.btns > button > a:hover {
+  color: #222;
 }
