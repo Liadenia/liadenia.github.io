@@ -400,28 +400,28 @@ svg {
             margin: 3%;
           }
           .po1{
-            background: url('../attr/icon/ai.png');
+            background: url('../attr/poBtn/btn1.png');
           }
           .po2{
-            background: url('../attr/icon/css.png');
+            background: url('../attr/poBtn/btn2.png');
           }
           .po3{
-            background: url('../attr/icon/html.png');
+            background: url('../attr/poBtn/btn3.png');
           }
           .po4{
-            background: url('../attr/icon/sass.png');
+            background: url('../attr/poBtn/btn4.png');
           }
           .po5{
             background: url('../attr/poBtn/btn5.png');
           }
           .po6{
-            background: url('../attr/icon/ai.png');
+            background: url('../attr/poBtn/btn6.png');
           }
           .po7{
             background: url('../attr/poBtn/btn7.png');
           }
           .po8{
-            background: url('../attr/icon/ai.png');
+            background: url('../attr/poBtn/btn8.png');
           }
           .po{
             -webkit-filter: grayscale(40%);
@@ -711,11 +711,17 @@ svg {
       background: #23a6d5;
       border-radius: 5px;
       margin-left: 15px;
+      &:hover{
+        box-shadow: inset 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+      }
       >a{
         width: 100px;
         display: block;
         padding: 5px;
-        color: #ddd;
+        color: #fff;
+        &:hover{
+          color: #222;
+        }
       }
     }
   }

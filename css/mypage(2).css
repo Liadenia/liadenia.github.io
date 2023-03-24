@@ -361,28 +361,28 @@ svg {
   margin: 3%;
 }
 #page1 .main_info .intro .fourth_p .wrapper .po1 {
-  background: url("../attr/icon/ai.png");
+  background: url("../attr/poBtn/btn1.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po2 {
-  background: url("../attr/icon/css.png");
+  background: url("../attr/poBtn/btn2.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po3 {
-  background: url("../attr/icon/html.png");
+  background: url("../attr/poBtn/btn3.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po4 {
-  background: url("../attr/icon/sass.png");
+  background: url("../attr/poBtn/btn4.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po5 {
   background: url("../attr/poBtn/btn5.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po6 {
-  background: url("../attr/icon/ai.png");
+  background: url("../attr/poBtn/btn6.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po7 {
   background: url("../attr/poBtn/btn7.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po8 {
-  background: url("../attr/icon/ai.png");
+  background: url("../attr/poBtn/btn8.png");
 }
 #page1 .main_info .intro .fourth_p .wrapper .po {
   filter: grayscale(40%);
@@ -618,11 +618,17 @@ svg {
   border-radius: 5px;
   margin-left: 15px;
 }
+.left .btns > button:hover {
+  box-shadow: inset 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
 .left .btns > button > a {
   width: 100px;
   display: block;
   padding: 5px;
-  color: #ddd;
+  color: #fff;
+}
+.left .btns > button > a:hover {
+  color: #222;
 }
 
 .right {
