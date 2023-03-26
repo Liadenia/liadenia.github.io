@@ -94,6 +94,7 @@ cardImg.forEach(image => {
 })
 
 
+
 // -------------- 포트폴리오 팝업 띄우기 ----------
 
 $(function(){
@@ -113,4 +114,56 @@ $(function(){
         $('.popup3').toggleClass('on');
         $('.popup3').fadeToggle(400)
     });
+
+
+// -------------- 카드요소 색상 띄우기 ----------
+let Hidden1Shown = false;
+
+$('.hidden1').hide();
+
+$('.move2, .move3, .card2, .card3').on('click', function(){
+    if (!Hidden1Shown) {
+        $('.hidden1').fadeIn(400);
+        Hidden1Shown = true;
+    }
+});
+
+$('.hidden1, .card1').on('click', function(){
+    $('.hidden1').fadeOut(400);
+    Hidden1Shown = false;
+});
+
+
+let Hidden2Shown = false;
+
+$('.move1, .move3, .card1, .card3').on('click', function(){
+    if (!Hidden2Shown) {
+    $('.hidden2').fadeIn(400);
+    Hidden2Shown = true;
+    }
+});
+
+$('.hidden2, .card2').on('click', function(){
+    $('.hidden2').fadeOut(400);
+    Hidden2Shown = false;
+});
+
+let Hidden3Shown = false;
+
+$('.move1, .move2, .card1, .card2').on('click', function(){
+    if (!Hidden3Shown) {
+    $('.hidden3').fadeIn(400);
+    Hidden3Shown = true;
+    }
+});
+
+$('.hidden3, .card3').on('click', function(){
+    $('.hidden3').fadeOut(400);
+    Hidden3Shown = false;
+});
+
+
+
+
+
 });
