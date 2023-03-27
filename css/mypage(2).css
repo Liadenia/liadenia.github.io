@@ -642,10 +642,44 @@ svg {
 #page5 .last {
   width: 50%;
   height: 30vh;
-  background: #fff;
   position: absolute;
-  bottom: 15%;
-  left: 10%;
+  bottom: 13%;
+  left: 13%;
+}
+#page5 .last .contact_2 {
+  background: linear-gradient(90deg, #583E92 0%, #5B2BC1 37.5%, rgba(72, 22, 179, 0) 100%);
+  padding: 25px 40px;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  webkit-backdrop-filter: blur(15px);
+}
+#page5 .last .contact_2 > p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.2em 0 0.3em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+  background: url("../attr/icon/bg.png") repeat-y;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: bg 10s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  background-clip: text;
+}
+#page5 .last .contact_2 > p:nth-child(1) {
+  font-size: 4.2rem;
+  font-weight: bold;
+}
+@keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 #page5 .page5-2 {
   width: 100px;
@@ -653,7 +687,7 @@ svg {
   background: #fff;
   position: fixed;
   bottom: 30%;
-  right: 50%;
+  right: 45%;
 }
 #page5 #last_wrapper {
   background: #ededed;

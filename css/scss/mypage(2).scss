@@ -757,18 +757,53 @@ svg {
   .last{
     width: 50%;
     height: 30vh;
-    background: #fff;
     position: absolute;
-    bottom: 15%;
-    left: 10%;
+    bottom: 13%;
+    left: 13%;
+    .contact_2{
+      // background: #4f338b;
+      background: linear-gradient(90deg, #583E92 0%, #5B2BC1 37.5%, rgba(72, 22, 179, 0) 100%);
+      padding: 25px 40px;
+      border-radius: 15px;
+      backdrop-filter: blur(15px);
+      webkit-backdrop-filter: blur(15px);
+      >p{
+        &:nth-child(1){
+          font-size: 4.2rem;
+          font-weight: bold;
+        }
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: .2em 0 .3em;
+        display: block;
+        margin: 0 auto;
+        text-shadow: 0 0 80px rgba(255,255,255,.5);
+        background: url('../attr/icon/bg.png') repeat-y;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: bg 10s linear infinite;
+        -webkit-transform: translate3d(0,0,0);
+        -webkit-backface-visibility: hidden;
+        background-clip: text;
+        @-webkit-keyframes bg {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 100% 50%; }
+        }
+        @keyframes bg {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 100% 50%; }
+        }
+      }
+    }
   }
   .page5-2{
+    //애니메이션 작업 삽입예정
     width: 100px;
     height: 300px;
     background: #fff;
     position: fixed;
     bottom: 30%;
-    right: 50%;
+    right: 45%;
   }
   #last_wrapper{
     background: #ededed;
