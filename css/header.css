@@ -103,6 +103,11 @@ body{
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+.con-txt>p:last-child{
+    font-size: 14px;
+    position: absolute;
+    bottom: 10%;
+}
 .con-bg{
     width:100vw; height:100vh;
     position:fixed;
