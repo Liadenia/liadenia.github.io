@@ -654,6 +654,13 @@ svg {
           backdrop-filter: blur(15px);
   webkit-backdrop-filter: blur(15px);
 }
+#page5 .last .contact_2 > a {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  margin: 10px 0 0 10px;
+  display: inline-block;
+}
 #page5 .last .contact_2 > p {
   font-size: 1.2rem;
   font-weight: bold;
