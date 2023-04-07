@@ -695,6 +695,7 @@ svg {
   position: fixed;
   bottom: 30%;
   right: 45%;
+  display: none;
 }
 #page5 #last_wrapper {
   background: #ededed;
