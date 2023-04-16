@@ -614,11 +614,7 @@ svg {
   top: 174px;
   left: 264px;
 }
-.right .vd1 {
-  top: 204px;
-  left: 263px;
-}
-.right .vd2 {
+.right .vd {
   top: 90px;
   left: 150px;
 }
@@ -803,7 +799,8 @@ svg {
   padding: 2% 10%;
 }
 .btns > button {
-  background: #23a6d5;
+  background: linear-gradient(180deg, #23A6D5 0%, #0A6181 100%);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin-left: 15px;
 }
