@@ -156,10 +156,10 @@ svg {
           width: 80%;
           height: 80%;
           box-sizing: border-box;
-          border: 1px solid #555;
+          // border: 1px solid #555;
           display: block;
           position: absolute;
-          top: 10%;
+          top: 5%;
           left: 10%;
         }
       }
@@ -695,7 +695,7 @@ svg {
 
 .left{
   width: 40%;
-  height: 80%;
+  height: 85%;
   background: #fff;
   margin: 5% 20px;
   border-radius: 20px;
@@ -711,6 +711,7 @@ svg {
     >p{
       font-size: 1.2rem;
       line-height: 30px;
+      margin-bottom: 4%;
     }
   }
 }
@@ -731,6 +732,7 @@ svg {
   .vd{
     top: 90px;
     left: 150px;
+    width: 100%;
   }
 }
 
@@ -828,7 +830,7 @@ svg {
       background: #ededed;
       .game_p{
         background: #fefefe;
-        width: 20vw;
+        width: 23vw;
         height: 60vh;
         display: flex;
         position: absolute;
